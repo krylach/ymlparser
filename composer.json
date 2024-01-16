@@ -1,0 +1,27 @@
+{
+    "name": "krylach/ymlparser",
+    "description": "YML (Yandex Market Language) parser",
+    "type": "libriary",
+    "keywords": ["yml", "parser", "yandex", "market"],
+    "homepage": "https://github.com/krylach/ymlparser",
+    "license": "MIT",
+    "support": {
+        "issues": "https://github.com/krylach/ymlparser/issues",
+        "source": "https://github.com/krylach/ymlparser"
+    },
+    "authors": [
+        {
+            "name": "Anton Krylach",
+            "email": "krylach.anton@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Krylach\\YMLParser\\": "src/"
+        }
+    },
+    "require": {
+        "php": ">=7.4",
+        "illuminate/collections": "^8.0"
+    }
+}
