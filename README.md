@@ -1,6 +1,6 @@
 ## Installation
 
-Use the package manager [composer](https://getcomposer.org/) to install foobar.
+Use the package manager [composer](https://getcomposer.org/) to install YML Parser.
 
 ```bash
 composer require krylach/ymlparser
