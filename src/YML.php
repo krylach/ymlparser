@@ -8,6 +8,7 @@ use Krylach\YMLParser\Types\Category;
 use Krylach\YMLParser\Types\Currency;
 use Krylach\YMLParser\Types\Offer;
 use Krylach\YMLParser\Types\Shop;
+
 /**
  * @method Shop getShop()
  * @method Collection getOffers()

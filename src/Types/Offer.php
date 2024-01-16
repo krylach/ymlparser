@@ -6,11 +6,14 @@ use Illuminate\Support\Collection;
 use Krylach\YMLParser\Interfaces\OfferInterface;
 use Krylach\YMLParser\OfferType;
 
+/**
+ * Offer
+ *
+ */
 class Offer extends OfferType implements OfferInterface
 {
     const PARAMETER_NODE_NAME   = 'param';
     const PICTURES_NODE_NAME    = 'picture';
-    const DESCRIPTION_NODE_NAME = 'description';
  
     protected array $attributes;
     protected Collection $pictures;
@@ -37,7 +40,6 @@ class Offer extends OfferType implements OfferInterface
     {
         foreach ($attributes as $key => $attribute) {
             $this->attributes[$key] = (string)$attribute;
-            
         }
     }
     
@@ -45,9 +47,9 @@ class Offer extends OfferType implements OfferInterface
      * Method formationChildAttributes
      *
      * @param \SimpleXMLElement $childNodes [explicite description]
-     * 
+     *
      * @var \SimpleXMLElement $node
-     * 
+     *
      * @return void
      */
     private function formationOfferAttributes(\SimpleXMLElement $childrenNodes)
@@ -63,9 +65,9 @@ class Offer extends OfferType implements OfferInterface
                 continue;
             }
 
-            $this->attributes[$node->getName()] = 
+            $this->attributes[$node->getName()] =
                 is_array($node) ?
-                    $this->formationChildAttributes($node) : 
+                    $this->formationChildAttributes($node) :
                     $this->stringify($node);
         }
     }
@@ -99,7 +101,7 @@ class Offer extends OfferType implements OfferInterface
 
         foreach ($node->{self::PICTURES_NODE_NAME} as $picture) {
             $this->pictures->push(new Picture($picture));
-        } 
+        }
     }
     
     /**

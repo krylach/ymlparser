@@ -12,5 +12,5 @@ class Currency extends Type
     {
         $this->id = strval($currency['id'] ?? null);
         $this->rate = doubleval($currency['rate'] ?? null);
-    }    
+    }
 }

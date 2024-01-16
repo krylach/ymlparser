@@ -1,6 +1,7 @@
 <?php
 
 namespace Krylach\YMLParser\Types;
+
 use Krylach\YMLParser\Type;
 
 class Picture extends Type

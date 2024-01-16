@@ -1,6 +1,7 @@
 <?php
 
 namespace Krylach\YMLParser\Types;
+
 use Krylach\YMLParser\Type;
 
 class Parameter extends Type
@@ -11,6 +12,6 @@ class Parameter extends Type
     public function __construct(string $name, string $value)
     {
         $this->name = $name;
-        $this->value = $value;        
+        $this->value = $value;
     }
 }

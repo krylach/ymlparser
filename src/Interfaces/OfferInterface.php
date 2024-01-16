@@ -2,6 +2,7 @@
 
 namespace Krylach\YMLParser\Interfaces;
 
-interface OfferInterface {
+interface OfferInterface
+{
     public function __construct(\SimpleXMLElement &$offer);
 }

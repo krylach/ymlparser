@@ -2,6 +2,7 @@
 
 namespace Krylach\YMLParser\Interfaces;
 
-interface OfferTypeInterface {
+interface OfferTypeInterface
+{
     public function __call($offer, $arguments);
 }
