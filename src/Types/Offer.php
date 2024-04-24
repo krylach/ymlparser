@@ -39,6 +39,18 @@ class Offer extends OfferType implements OfferInterface
     private function formationNodeAttributes(\SimpleXMLElement $attributes)
     {
         foreach ($attributes as $key => $attribute) {
+            $keys = explode('_', $key);
+            if (count($keys) > 1) {
+                foreach ($keys as $key => &$value) {
+                    if ($key === 0) {
+                        continue;
+                    }
+
+                    $value = ucwords($value);
+                }
+
+                $key = implode($keys);
+            }
             $this->attributes[$key] = (string)$attribute;
         }
     }
